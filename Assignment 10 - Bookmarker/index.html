@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Bookmarker by Youssef</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <h1 class="text-center pb-3">
+        <span class="bg-yellow">Bookmarker</span>
+      </h1>
+      <div class="page-body">
+        <div class="body-title text-center">
+          <h4 class="py-2">
+            <i class="fa-solid fa-bookmark"></i>
+            <span> Bookmark your favorite sites</span>
+            <i class="fa-solid fa-bookmark"></i>
+          </h4>
+        </div>
+        <hr />
+
+        <div class="body-content">
+          <form action="">
+            <label for="name" class="py-2 fw-bold">
+              <i class="fa-solid fa-book pe-1"></i>
+              Site Name
+            </label>
+            <input
+              id="siteName"
+              class="form-control mb-4"
+              type="text"
+              placeholder="Ex. Facebook"
+            />
+            <label for="URL" class="py-2 fw-bold">
+              <i class="fa-solid fa-link pe-1"></i>
+              Site URL
+            </label>
+            <input
+              id="siteURL"
+              class="form-control"
+              type="text"
+              placeholder="Ex. https://facebook.com"
+            />
+            <button
+              id="submitButton"
+              class="btn btn-danger text-center mt-4 px-5 position-relative start-50 translate-middle-x"
+              type="button"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+      <hr />
+
+      <div>
+        <table
+          class="table table-light table-borderless table-hover text-center"
+        >
+          <thead>
+            <tr class="fw-bold">
+              <td>Index</td>
+              <td>Website Name</td>
+              <td>Visit</td>
+              <td>Delete</td>
+            </tr>
+          </thead>
+          <tbody id="dropContent" class="align-middle"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Modal for invalid URL-->
+    <div
+      class="modal fade"
+      id="ModalURL"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Invalid URL</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Please enter a valid URL.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for invalid Site Name-->
+    <div
+      class="modal fade"
+      id="ModalSiteName"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel2">
+              Invalid Site Name
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Please enter a valid Site Name.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal for invalid Site Name and URL-->
+    <div
+      class="modal fade"
+      id="ModalSiteNameAndUrl"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel3">
+              Invalid Site Name and URL
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Please enter a valid Site Name and URL.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
